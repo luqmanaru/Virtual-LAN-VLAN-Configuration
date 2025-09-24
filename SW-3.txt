@@ -1,12 +1,15 @@
 Switch>enable
 Switch#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
+Enter configuration commands, one per line. End with CNTL/Z.
 Switch(config)#hostname SW-3
 SW-3(config)#vlan 10
-SW-3(config-vlan)#name Marketing
+SW-3(config-vlan)#name marketing
 SW-3(config-vlan)#exit
 SW-3(config)#vlan 20
-SW-3(config-vlan)#name Sales
+SW-3(config-vlan)#name sales
+SW-3(config-vlan)#exit
+SW-3(config)#vlan 30
+SW-3(config-vlan)#name finance
 SW-3(config-vlan)#exit
 SW-3(config)#interface range fa0/4-10
 SW-3(config-if-range)#switchport access vlan 10
